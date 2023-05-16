@@ -46,7 +46,6 @@ ext {
 }
 
 dependencies {
-    implementation "net.serenity-bdd:serenity-junit:${serenityVersion}"
     implementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
     implementation "net.serenity-bdd:serenity-rest-assured:${serenityVersion}"
     implementation "net.serenity-bdd:serenity-ensure:${serenityVersion}"
