@@ -11,13 +11,15 @@ import static co.com.choucair.rest.enums.RestService.DELETE_USER;
 
 @AllArgsConstructor
 public class DeleteUserRest implements Task {
+    private int id;
+
+    public static DeleteUserRest inReqres(int id) {
+        return Tasks.instrumented(DeleteUserRest.class, id);
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
-        System.out.println(DELETE_USER.toString()+id);
-        actor.attemptsTo(Delete.from(DELETE_USER.toString()+id));
-    }
-    private int id;
-    public static DeleteUserRest inReqres(int id){
-        return Tasks.instrumented(DeleteUserRest.class, id);
+        System.out.println(DELETE_USER.toString() + id);
+        actor.attemptsTo(Delete.from(DELETE_USER.toString() + id));
     }
 }

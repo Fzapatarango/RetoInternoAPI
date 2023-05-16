@@ -10,11 +10,12 @@ public enum RestService {
     CREATE_USER("/create");
 
 
+    private final String uri;
 
-    private String uri;
     RestService(String uri) {
         this.uri = uri;
     }
+
     @Override
     public String toString() {
         return uri;

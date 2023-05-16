@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Question;
 import static net.serenitybdd.rest.SerenityRest.lastResponse;
 
 public class LastResponseStatusCode implements Question<Boolean> {
-    private int cod;
+    private final int cod;
 
     public LastResponseStatusCode(int cod) {
         this.cod = cod;

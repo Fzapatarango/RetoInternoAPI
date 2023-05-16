@@ -5,7 +5,6 @@ import co.com.choucair.rest.tasks.UpdateUser;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import net.serenitybdd.screenplay.actors.OnStage;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 

@@ -12,13 +12,16 @@ import java.util.List;
 import static co.com.choucair.rest.enums.RestService.CREATE_USER;
 
 public class CreateUserRest implements Task {
-    private List<ModelCreateUserRest> modelCreateUserRest;
+    private final List<ModelCreateUserRest> modelCreateUserRest;
+
     public CreateUserRest(DataTable data) {
         this.modelCreateUserRest = data.asList(ModelCreateUserRest.class);
     }
+
     public static CreateUserRest with(DataTable data) {
         return Tasks.instrumented(CreateUserRest.class, data);
     }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         System.out.println(modelCreateUserRest.get(0).toString());
